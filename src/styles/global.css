@@ -1,0 +1,19 @@
+/*
+  Variables globales de diseño.
+  Aquí se definirán, en un único sitio, TODOS los colores y tipografías
+  que usará la web entera (para poder cambiarlos de forma global).
+
+  Pendiente de definir valores reales, por ejemplo:
+
+  :root {
+    --color-bg: ...;
+    --color-bg-alt: ...;
+    --color-text: ...;
+    --color-text-inverse: ...;
+    --color-accent: ...;      (dorado de "GALERÍA", "SOBRE NOSOTROS", links, etc.)
+    --color-footer-bg: ...;   (marrón oscuro del footer)
+
+    --font-heading: ...;      (serif tipo "Lagar")
+    --font-body: ...;         (sans-serif del texto general)
+  }
+*/
