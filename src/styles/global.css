@@ -1,19 +1,108 @@
 /*
-  Variables globales de diseño.
-  Aquí se definirán, en un único sitio, TODOS los colores y tipografías
-  que usará la web entera (para poder cambiarlos de forma global).
-
-  Pendiente de definir valores reales, por ejemplo:
-
-  :root {
-    --color-bg: ...;
-    --color-bg-alt: ...;
-    --color-text: ...;
-    --color-text-inverse: ...;
-    --color-accent: ...;      (dorado de "GALERÍA", "SOBRE NOSOTROS", links, etc.)
-    --color-footer-bg: ...;   (marrón oscuro del footer)
-
-    --font-heading: ...;      (serif tipo "Lagar")
-    --font-body: ...;         (sans-serif del texto general)
-  }
+  Variables globales de diseño — Lagar Restaurant
+  Todo el color y la tipografía de la web se controla desde aquí.
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,600;1,400;1,600;1,700&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+  /* Colores (brand book) */
+  --color-blanco: #f3ece1;
+  --color-negro: #2b2620;
+  --color-ocre: #d4a72c;
+  --color-tierra: #5c0a1e;
+  --color-vino: #730822;
+
+  /* Roles semánticos, derivados de la paleta anterior */
+  --color-bg: var(--color-blanco);
+  --color-bg-dark: var(--color-negro);
+  --color-text: var(--color-negro);
+  --color-text-inverse: var(--color-blanco);
+  --color-text-muted: #6b6259;
+
+  --color-accent: var(--color-ocre);
+  --color-link: var(--color-vino);
+
+  --color-footer-bg: var(--color-tierra);
+  --color-footer-bottom-bg: #0a0a0a;
+
+  /* Tipografía */
+  --font-heading: "Libre Bodoni", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Tamaños de tipo */
+  --fs-logo: 2.75rem;
+  --fs-h1: 3.75rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 0.9375rem;
+  --fs-small: 0.8125rem;
+  --fs-nav: 0.8125rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}

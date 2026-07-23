@@ -1,5 +1,176 @@
 ---
-// Cabecera común a todas las páginas:
-// logo "Lagar Restaurant", menú (Carta, Galería, Sobre Nosotros, Reserva) y selector de idioma (ES).
-// Pendiente de implementar.
+// Cabecera común a todas las páginas.
+// `variant` controla el color según el fondo de cada página:
+//   "overlay" -> transparente, texto blanco, posicionada sobre una imagen (Home, Galería)
+//   "dark"    -> fondo marrón sólido, texto blanco (Sobre Nosotros)
+//   "light"   -> fondo crema sólido, texto oscuro (Reserva)
+// `active` indica qué item de menú resaltar en ocre.
+
+interface Props {
+  variant?: 'overlay' | 'dark' | 'light';
+  active?: 'carta' | 'galeria' | 'sobre-nosotros' | 'reserva' | null;
+  lang?: 'es' | 'cat';
+  altHref?: string;
+}
+
+const { variant = 'light', active = null, lang = 'es', altHref = '/' } = Astro.props;
+
+const navItems = lang === 'cat' ? [
+  { key: 'carta',          label: 'Carta',           href: '/cat/carta' },
+  { key: 'galeria',        label: 'Galeria',          href: '/cat/galeria' },
+  { key: 'sobre-nosotros', label: 'Sobre Nosaltres',  href: '/cat/sobre-nosaltres' },
+  { key: 'reserva',        label: 'Reserva',          href: '/cat/reserva' },
+] : [
+  { key: 'carta',          label: 'Carta',            href: '/carta' },
+  { key: 'galeria',        label: 'Galería',          href: '/galeria' },
+  { key: 'sobre-nosotros', label: 'Sobre Nosotros',   href: '/sobre-nosotros' },
+  { key: 'reserva',        label: 'Reserva',          href: '/reserva' },
+];
 ---
+
+<header class={`site-header site-header--${variant}`}>
+  <div class="site-header__inner">
+    <a href="/" class="site-header__logo">
+      <span class="site-header__logo-title">Lagar</span>
+      <span class="site-header__logo-sub"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span></span>
+    </a>
+
+    <nav class="site-header__nav">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`site-header__nav-link ${active === item.key ? 'is-active' : ''}`}
+        >
+          {item.label.toUpperCase()}
+        </a>
+      ))}
+    </nav>
+
+    <div class="site-header__lang-picker">
+      {lang === 'es' ? (
+        <>
+          <span class="site-header__lang-option is-current">ES</span>
+          <span class="site-header__lang-sep">|</span>
+          <a href={altHref} class="site-header__lang-option">CAT</a>
+        </>
+      ) : (
+        <>
+          <a href={altHref} class="site-header__lang-option">ES</a>
+          <span class="site-header__lang-sep">|</span>
+          <span class="site-header__lang-option is-current">CAT</span>
+        </>
+      )}
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    width: 100%;
+    z-index: 10;
+    padding: 1.5rem 0;
+  }
+
+  .site-header--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    color: var(--color-text-inverse);
+  }
+
+  .site-header--dark {
+    position: relative;
+    background-color: var(--color-tierra);
+    color: var(--color-text-inverse);
+  }
+
+  .site-header--light {
+    position: relative;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+  }
+
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .site-header__logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    flex-shrink: 0;
+    color: var(--color-accent);
+  }
+
+  .site-header__logo-title {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+
+  .site-header__logo-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.55rem;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .site-header__nav-link {
+    font-size: var(--fs-nav);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: color 0.2s ease;
+  }
+
+  .site-header__nav-link:hover {
+    color: var(--color-accent);
+  }
+
+  .site-header__nav-link.is-active {
+    color: var(--color-tierra);
+  }
+
+  .site-header__lang-picker {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .site-header__lang-option {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .site-header__lang-option.is-current {
+    color: var(--color-accent) !important;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .site-header__lang-option:not(.is-current):hover {
+    color: var(--color-accent);
+  }
+
+  .site-header__lang-sep {
+    opacity: 0.35;
+  }
+</style>

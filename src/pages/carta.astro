@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Carta" headerVariant="light" active="carta">
+  <section class="carta-placeholder container">
+    <h1>Carta</h1>
+    <p>
+      Nuestra carta estará disponible próximamente en formato PDF descargable.
+      Estamos trabajando en ella — en breve podrás consultarla desde aquí.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .carta-placeholder {
+    padding: 6rem 0;
+    text-align: center;
+  }
+
+  .carta-placeholder h1 {
+    font-size: var(--fs-h2);
+    margin-bottom: 1.5rem;
+  }
+</style>

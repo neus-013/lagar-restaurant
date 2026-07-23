@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sobre Nosaltres" headerVariant="light" active="sobre-nosotros">
+  <section class="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <h1 class="about__title">Benvinguts!</h1>
+
+        <p>
+          Som el Sergio i l'Amalia, una parella que gaudeix de la cuina de
+          sempre —la que sap a diumenge, a taula compartida, a recepta que es
+          repeteix perquè mai no falla— i que un dia va decidir obrir un espai
+          propi per compartir-la amb el barri que ens va veure créixer: Sant Andreu.
+        </p>
+
+        <p>
+          Som un local petit —ho sabem, i ho portem amb orgull—. Preferim
+          poques taules ben cuidades a un saló que no puguem atendre com mereix.
+          Això significa que, si vens un parell de vegades, és molt probable que
+          ja sapiguem quin plat demanaràs, o que et preguntem com va anar allò
+          que ens vas explicar l'última vegada. Aquesta proximitat no és un
+          eslògan: és, senzillament, com entenem tenir un restaurant en un barri
+          com el nostre.
+        </p>
+
+        <p>
+          A la cuina no ens conformem amb repetir el de sempre. Els nostres
+          arrossos, els plats per compartir, les croquetes que tant ens demanen
+          que repetim, el pop, el tataki de tonyina: tot parteix del receptari
+          mediterrani que coneixem bé, però amb marge per sorprendre, per un
+          punt de textura diferent, per una presentació que també es mengi amb
+          els ulls. Tradició i avantguarda, a parts iguals, sense que cap de
+          les dues pesi més que l'altra.
+        </p>
+
+        <p>
+          I llavors hi ha els dies importants. Hem apagat espelmes en pastissos
+          d'aniversari i hem cantat la cançó amb tota la taula, hem estat el
+          lloc de trobada de grans amistats i el lloc de confiança per quan es
+          vol menjar com a casa. Ens hem convertit, sense buscar-ho del tot, en
+          el lloc on algunes famílies i amistats celebren el que de debò importa.
+          I això, honestament, és el que més ens omple.
+        </p>
+
+        <p>
+          No pretenem ser el restaurant més gran de Sant Andreu, ni el més
+          conegut fora d'ell. Ens n'hi ha prou amb ser el que obres quan vols
+          celebrar alguna cosa, el que recomanves a un amic dient "ves-hi, segur
+          que t'agradarà", el lloc al qual sempre es pot tornar.
+        </p>
+
+        <p>
+          Això és Lagar. Gràcies per deixar-nos formar part dels vostres dies
+          importants.
+        </p>
+
+        <p class="about__signature">
+          Amb calidesa,<br />
+          Sergio i Amalia
+        </p>
+      </div>
+
+      <div class="about__image">
+        <img src="/images/high-angle-business-partners-working.jpg" alt="Sergio i Amalia treballant a Lagar Restaurant" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 4rem 0 6rem;
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about__title {
+    font-size: 3.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .about__text p {
+    margin-bottom: 1.5rem;
+  }
+
+  .about__signature {
+    font-style: italic;
+  }
+
+  .about__image img {
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .about__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

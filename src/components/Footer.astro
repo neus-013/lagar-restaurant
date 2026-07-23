@@ -1,5 +1,102 @@
 ---
-// Pie de página común a todas las páginas:
-// Horario, Contacto (dirección, teléfono, instagram) y enlaces legales.
-// Pendiente de implementar.
+// Pie de página común a todas las páginas: Horario, Contacto y enlaces legales.
 ---
+
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Horario</h3>
+      <p class="site-footer__text">
+        Lunes a Viernes 09:00h a 17:00h<br />
+        Sábado 12:00h a 17:00h
+      </p>
+    </div>
+
+    <div class="site-footer__col">
+      <h3 class="site-footer__heading">Contacto</h3>
+
+      <p class="site-footer__contact-item">
+        <img src="/icons/marcador%20(1).svg" alt="" class="site-footer__icon" />
+        <span>Carrer del Llenguadoc, 6, Sant Andreu, Barcelona</span>
+      </p>
+
+      <p class="site-footer__contact-item">
+        <img src="/icons/llamada-telefonica.svg" alt="" class="site-footer__icon" />
+        <span>933 46 82 70</span>
+      </p>
+
+      <p class="site-footer__contact-item">
+        <img src="/icons/instagram.svg" alt="" class="site-footer__icon" />
+        <span>lagar_restaurant</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="site-footer__legal">
+    <a href="/politica-de-privacidad">Política de Privacidad</a>
+    <span class="site-footer__divider">|</span>
+    <a href="/politica-de-cookies">Política de Cookies</a>
+    <span class="site-footer__divider">|</span>
+    <a href="/aviso-legal">Aviso Legal</a>
+  </div>
+</footer>
+
+<style>
+  .site-footer__main {
+    width: 100%;
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-inverse);
+    padding: 2.5rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+
+  .site-footer__col {
+    flex: 1 1 300px;
+  }
+
+  .site-footer__heading {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .site-footer__text {
+    font-size: var(--fs-small);
+  }
+
+  .site-footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+    font-size: var(--fs-small);
+  }
+
+  .site-footer__icon {
+    width: 16px;
+    height: 16px;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+    filter: brightness(0) invert(1);
+  }
+
+  .site-footer__legal {
+    background-color: var(--color-footer-bottom-bg);
+    color: var(--color-text-inverse);
+    text-align: center;
+    padding: 0.6rem 2rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+
+  .site-footer__legal a {
+    padding: 0 0.75rem;
+  }
+
+  .site-footer__divider {
+    opacity: 0.5;
+  }
+</style>

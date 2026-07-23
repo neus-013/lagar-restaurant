@@ -1,5 +1,111 @@
 ---
-// Página Sobre Nosotros:
-// Texto "Bienvenidos!" + historia del restaurante (Sergio y Amalia) + imagen.
-// Pendiente de implementar.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+
+<BaseLayout title="Sobre Nosotros" headerVariant="light" active="sobre-nosotros">
+  <section class="about">
+    <div class="container about__grid">
+      <div class="about__text">
+        <h1 class="about__title">Bienvenidos!</h1>
+
+        <p>
+          Somos Sergio y Amalia, una pareja que disfruta de la cocina de siempre
+          —la que sabe a domingo, a mesa compartida, a receta que se repite
+          porque nunca falla— y que un día decidió abrir un espacio propio para
+          compartirla con el barrio que nos vio crecer: Sant Andreu.
+        </p>
+
+        <p>
+          Somos un local pequeño —lo sabemos, y lo llevamos con orgullo—.
+          Preferimos pocas mesas bien cuidadas a un salón que no podamos
+          atender como merece. Eso significa que, si vienes un par de veces, es
+          muy probable que ya sepamos qué plato pedirás, o que te preguntemos
+          cómo fue esa cosa que nos contaste la última vez. Esa cercanía no es
+          un eslogan: es, sencillamente, cómo entendemos tener un restaurante
+          en un barrio como el nuestro.
+        </p>
+
+        <p>
+          En cocina no nos conformamos con repetir lo de siempre. Nuestros
+          arroces, los platos para compartir, las croquetas que tanto nos
+          piden que repitamos, el pulpo, el tataki de atún: todo parte del
+          recetario mediterráneo que conocemos bien, pero con margen para
+          sorprender, para un punto de textura distinto, para una presentación
+          que también se coma con los ojos. Tradición y vanguardia, a partes
+          iguales, sin que ninguna de las dos pese más que la otra.
+        </p>
+
+        <p>
+          Y luego están los días importantes. Hemos puesto velas en tartas de
+          cumpleaños y cantado la canción con la mesa entera, hemos sido el
+          sitio de encuentro de grandes amistades y el sitio de confianza para
+          cuando se quiere comer como en casa. Nos hemos convertido, sin
+          buscarlo del todo, en el lugar donde algunas familias y amistades
+          celebran lo que de verdad importa. Y eso, honestamente, es lo que
+          más nos llena.
+        </p>
+
+        <p>
+          No pretendemos ser el restaurante más grande de Sant Andreu, ni el
+          más conocido fuera de él. Nos basta con ser el que abres cuando
+          quieres celebrar algo, el que recomiendas a un amigo diciendo "ve,
+          seguro que te gusta", el sitio al que siempre se puede volver.
+        </p>
+
+        <p>
+          Esto es Lagar. Gracias por dejarnos formar parte de vuestros días
+          importantes.
+        </p>
+
+        <p class="about__signature">
+          Con cariño,<br />
+          Sergio y Amalia
+        </p>
+      </div>
+
+      <div class="about__image">
+        <img src="/images/high-angle-business-partners-working.jpg" alt="Sergio y Amalia trabajando en Lagar Restaurant" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 4rem 0 6rem;
+  }
+
+  .about__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about__title {
+    font-size: 3.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .about__text p {
+    margin-bottom: 1.5rem;
+  }
+
+  .about__signature {
+    font-style: italic;
+  }
+
+  .about__image img {
+    width: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .about__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
