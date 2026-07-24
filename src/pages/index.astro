@@ -7,10 +7,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <img src={import.meta.env.BASE_URL + 'images/espacio-1.jpg'} alt="Interior de Lagar Restaurant" class="hero__bg" />
     <div class="hero__overlay"></div>
     <div class="container hero__content">
-      <h1 class="hero__title">
-        Lagar
-        <span class="hero__title-sub"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span></span>
-      </h1>
+      <img src={import.meta.env.BASE_URL + 'images/lagar-logo-gold.png'} alt="Lagar Restaurant" class="hero__logo" />
       <hr class="divider-gold" />
       <p class="hero__subtitle">
         Cocina creativa mediterránea en el corazón de Sant Andreu
@@ -31,10 +28,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section class="intro">
     <div class="container intro__inner">
-      <h2 class="intro__logo">
-        Lagar
-        <span class="intro__logo-sub"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span></span>
-      </h2>
+      <img src={import.meta.env.BASE_URL + 'images/lagar-logo-black.png'} alt="Lagar Restaurant" class="intro__logo" />
       <hr class="divider-gold" />
 
       <p>
@@ -124,29 +118,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--color-text-inverse);
   }
 
-  .hero__title {
-    font-size: var(--fs-h1);
-    display: inline-flex;
-    flex-direction: column;
-    line-height: 1;
-    background: linear-gradient(180deg, #f0d989 0%, var(--color-ocre) 45%, #8b6914 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .hero__title-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    color: var(--color-text-inverse);
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    background: none;
+  .hero__logo {
+    width: min(260px, 55%);
+    height: auto;
+    margin-bottom: 1rem;
   }
 
   .hero__subtitle {
@@ -196,21 +171,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   .intro__logo {
-    font-size: 3.5rem;
-    line-height: 1;
-    margin-bottom: 2.5rem;
-    display: inline-flex;
-    flex-direction: column;
-  }
-
-  .intro__logo-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: space-between;
+    width: 180px;
+    height: auto;
+    margin: 0 auto 2rem;
   }
 
   .intro p {
@@ -276,10 +239,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     .intro {
       padding: 3rem 0;
-    }
-
-    .intro__logo {
-      font-size: 2.5rem;
     }
 
     .preview {

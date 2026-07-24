@@ -32,8 +32,7 @@ const navItems = lang === 'cat' ? [
 <header class={`site-header site-header--${variant}`}>
   <div class="site-header__inner">
     <a href={`${base}/`} class="site-header__logo">
-      <span class="site-header__logo-title">Lagar</span>
-      <span class="site-header__logo-sub"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span></span>
+      <img src={import.meta.env.BASE_URL + 'images/lagar-logo-ocre.png'} alt="Lagar Restaurant" class="site-header__logo-img" />
     </a>
 
     <nav class="site-header__nav">
@@ -120,26 +119,13 @@ const navItems = lang === 'cat' ? [
   }
 
   .site-header__logo {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
     flex-shrink: 0;
-    color: var(--color-accent);
+    line-height: 0;
   }
 
-  .site-header__logo-title {
-    font-family: var(--font-heading);
-    font-style: italic;
-    font-weight: 700;
-    font-size: 2.2rem;
-  }
-
-  .site-header__logo-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.55rem;
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: space-between;
+  .site-header__logo-img {
+    height: 44px;
+    width: auto;
   }
 
   .site-header__nav {
