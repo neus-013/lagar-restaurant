@@ -90,4 +90,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       grid-row: auto;
     }
   }
+
+  @media (max-width: 480px) {
+    .gallery__grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 240px;
+    }
+
+    .gallery__item--paella,
+    .gallery__item--croquetas,
+    .gallery__item--team {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
 </style>

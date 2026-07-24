@@ -114,3 +114,24 @@ button {
   margin: 1.5rem auto;
   border: none;
 }
+
+/* === Responsive base === */
+@media (max-width: 768px) {
+  :root {
+    --fs-h1: 2.75rem;
+    --fs-h2: 1.875rem;
+    --fs-h3: 1.25rem;
+    --fs-logo: 2.2rem;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-h1: 2.25rem;
+    --fs-h2: 1.625rem;
+  }
+}
