@@ -4,7 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Inicio" headerVariant="overlay" active={null}>
   <section class="hero">
-    <img src="/images/espacio-1.jpg" alt="Interior de Lagar Restaurant" class="hero__bg" />
+    <img src={import.meta.env.BASE_URL + 'images/espacio-1.jpg'} alt="Interior de Lagar Restaurant" class="hero__bg" />
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <h1 class="hero__title">
@@ -20,12 +20,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <section class="preview">
     <div class="preview__grid">
-      <img src="/images/delicious-eggplant-dish-arrangement.jpg" alt="Berenjenas a la brasa" />
-      <img src="/images/plato-espanol-anchoas-aceitunas_461960-3805.jpg" alt="Anchoas con aceitunas" />
-      <img src="/images/delicious-fried-croquette-arrangement.jpg" alt="Croquetas caseras" />
+      <img src={import.meta.env.BASE_URL + 'images/delicious-eggplant-dish-arrangement.jpg'} alt="Berenjenas a la brasa" />
+      <img src={import.meta.env.BASE_URL + 'images/plato-espanol-anchoas-aceitunas_461960-3805.jpg'} alt="Anchoas con aceitunas" />
+      <img src={import.meta.env.BASE_URL + 'images/delicious-fried-croquette-arrangement.jpg'} alt="Croquetas caseras" />
     </div>
     <div class="preview__cta">
-      <a href="/galeria" class="link-underline">Ver Galería &rsaquo;</a>
+      <a href={import.meta.env.BASE_URL + 'galeria'} class="link-underline">Ver Galería &rsaquo;</a>
     </div>
   </section>
 
@@ -58,7 +58,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         profesionalidad y cariño.
       </p>
 
-      <a href="/sobre-nosotros" class="link-underline">Conócenos &rsaquo;</a>
+      <a href={import.meta.env.BASE_URL + 'sobre-nosotros'} class="link-underline">Conócenos &rsaquo;</a>
     </div>
   </section>
 
@@ -80,12 +80,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           como una comida entre amigos donde cada detalle está pensado para
           que disfrutéis redescubriendo la cocina de siempre.
         </p>
-        <a href="/carta" class="link-underline">Descubre nuestra carta &rsaquo;</a>
+        <a href={import.meta.env.BASE_URL + 'carta'} class="link-underline">Descubre nuestra carta &rsaquo;</a>
       </div>
 
       <div class="kitchen__images">
-        <img src="/images/gourmet-paella-with-seafood-saffron-spice-generated-by-ai.jpg" alt="Paella de marisco" />
-        <img src="/images/portion-beefsteak-dining-meal-barbecued.jpg" alt="Entrecot a la plancha con ensalada" />
+        <img src={import.meta.env.BASE_URL + 'images/gourmet-paella-with-seafood-saffron-spice-generated-by-ai.jpg'} alt="Paella de marisco" />
+        <img src={import.meta.env.BASE_URL + 'images/portion-beefsteak-dining-meal-barbecued.jpg'} alt="Entrecot a la plancha con ensalada" />
       </div>
     </div>
   </section>

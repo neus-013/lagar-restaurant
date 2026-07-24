@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 <BaseLayout title="Inici" headerVariant="overlay" active={null}>
   <section class="hero">
-    <img src="/images/espacio-1.jpg" alt="Interior de Lagar Restaurant" class="hero__bg" />
+    <img src={import.meta.env.BASE_URL + 'images/espacio-1.jpg'} alt="Interior de Lagar Restaurant" class="hero__bg" />
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <h1 class="hero__title">
@@ -20,12 +20,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   <section class="preview">
     <div class="preview__grid">
-      <img src="/images/delicious-eggplant-dish-arrangement.jpg" alt="Albergínies a la brasa" />
-      <img src="/images/plato-espanol-anchoas-aceitunas_461960-3805.jpg" alt="Anxoves amb olives" />
-      <img src="/images/delicious-fried-croquette-arrangement.jpg" alt="Croquetes casolanes" />
+      <img src={import.meta.env.BASE_URL + 'images/delicious-eggplant-dish-arrangement.jpg'} alt="Albergínies a la brasa" />
+      <img src={import.meta.env.BASE_URL + 'images/plato-espanol-anchoas-aceitunas_461960-3805.jpg'} alt="Anxoves amb olives" />
+      <img src={import.meta.env.BASE_URL + 'images/delicious-fried-croquette-arrangement.jpg'} alt="Croquetes casolanes" />
     </div>
     <div class="preview__cta">
-      <a href="/cat/galeria" class="link-underline">Veure Galeria &rsaquo;</a>
+      <a href={import.meta.env.BASE_URL + 'cat/galeria'} class="link-underline">Veure Galeria &rsaquo;</a>
     </div>
   </section>
 
@@ -56,7 +56,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         d'artificis: només el que sap bé, servit amb professionalitat i calidesa.
       </p>
 
-      <a href="/cat/sobre-nosaltres" class="link-underline">Coneix-nos &rsaquo;</a>
+      <a href={import.meta.env.BASE_URL + 'cat/sobre-nosaltres'} class="link-underline">Coneix-nos &rsaquo;</a>
     </div>
   </section>
 
@@ -77,12 +77,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           àpat entre amics on cada detall està pensat perquè gaudiu redescobrint
           la cuina de sempre.
         </p>
-        <a href="/cat/carta" class="link-underline">Descobreix la nostra carta &rsaquo;</a>
+        <a href={import.meta.env.BASE_URL + 'cat/carta'} class="link-underline">Descobreix la nostra carta &rsaquo;</a>
       </div>
 
       <div class="kitchen__images">
-        <img src="/images/gourmet-paella-with-seafood-saffron-spice-generated-by-ai.jpg" alt="Paella de marisc" />
-        <img src="/images/portion-beefsteak-dining-meal-barbecued.jpg" alt="Entrecot a la planxa amb amanida" />
+        <img src={import.meta.env.BASE_URL + 'images/gourmet-paella-with-seafood-saffron-spice-generated-by-ai.jpg'} alt="Paella de marisc" />
+        <img src={import.meta.env.BASE_URL + 'images/portion-beefsteak-dining-meal-barbecued.jpg'} alt="Entrecot a la planxa amb amanida" />
       </div>
     </div>
   </section>

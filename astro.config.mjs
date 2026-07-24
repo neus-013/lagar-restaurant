@@ -3,5 +3,5 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://neus-013.github.io",
-  base: "/lagar-restaurant",
+  base: "/lagar-restaurant/",
 });
