@@ -57,10 +57,11 @@
   }
 
   .site-footer__brand {
-    flex: 0 0 100%;
+    flex: 1 1 0;
     display: flex;
-    justify-content: center;
-    padding: 0 3rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 3rem;
   }
 
   .site-footer__brand-logo {
@@ -128,7 +129,8 @@
     }
 
     .site-footer__brand {
-      padding: 0 1.5rem 1rem;
+      width: 100%;
+      padding: 0 1.5rem;
     }
 
     .site-footer__col {
