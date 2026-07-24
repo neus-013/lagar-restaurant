@@ -17,8 +17,13 @@ const {
   active = null,
 } = Astro.props;
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. '/lagar-restaurant' or ''
 const pathname = Astro.url.pathname;
-const lang = pathname.startsWith('/cat') ? 'cat' : 'es';
+// Strip the base prefix so language detection works regardless of deployment path
+const pagePath = BASE && pathname.startsWith(BASE)
+  ? pathname.slice(BASE.length) || '/'
+  : pathname;
+const lang = pagePath.startsWith('/cat') ? 'cat' : 'es';
 
 // Pàgines amb slug diferent en cada idioma
 const slugMap: Record<string, string> = {
@@ -26,11 +31,13 @@ const slugMap: Record<string, string> = {
   '/cat/sobre-nosaltres':  '/sobre-nosotros',
 };
 
-const altHref = slugMap[pathname] ?? (
+const relPath = slugMap[pagePath] ?? (
   lang === 'cat'
-    ? (pathname.replace(/^\/cat/, '') || '/')
-    : `/cat${pathname === '/' ? '/' : pathname}`
+    ? (pagePath.replace(/^\/cat/, '') || '/')
+    : `/cat${pagePath === '/' ? '/' : pagePath}`
 );
+
+const altHref = `${BASE}${relPath}`;
 ---
 
 <!doctype html>

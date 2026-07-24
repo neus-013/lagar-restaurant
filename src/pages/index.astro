@@ -11,6 +11,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Lagar
         <span class="hero__title-sub"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span></span>
       </h1>
+      <hr class="divider-gold" />
       <p class="hero__subtitle">
         Cocina creativa mediterránea en el corazón de Sant Andreu
       </p>
@@ -34,6 +35,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Lagar
         <span class="intro__logo-sub"><span>R</span><span>E</span><span>S</span><span>T</span><span>A</span><span>U</span><span>R</span><span>A</span><span>N</span><span>T</span></span>
       </h2>
+      <hr class="divider-gold" />
 
       <p>
         Lagar nació de una idea sencilla: que comer bien no debería ser un
@@ -127,6 +129,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     display: inline-flex;
     flex-direction: column;
     line-height: 1;
+    background: linear-gradient(180deg, #f0d989 0%, var(--color-ocre) 45%, #8b6914 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .hero__title-sub {
@@ -137,6 +143,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-top: 0.5rem;
     display: flex;
     justify-content: space-between;
+    color: var(--color-text-inverse);
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    background: none;
   }
 
   .hero__subtitle {
