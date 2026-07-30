@@ -12,7 +12,7 @@
       <h3 class="site-footer__heading">Horario</h3>
       <p class="site-footer__text">
         Lunes a Viernes 09:00h a 17:00h<br />
-        Sábado 12:00h a 17:00h
+        Sábado 13:00h a 17:00h
       </p>
     </div>
 
@@ -21,17 +21,17 @@
 
       <p class="site-footer__contact-item">
         <img src={import.meta.env.BASE_URL + 'icons/marcador%20(1).svg'} alt="" class="site-footer__icon" />
-        <span>Carrer del Llenguadoc, 6, Sant Andreu, Barcelona</span>
+        <span><a href="https://maps.google.com/maps?q=Carrer+del+Llenguadoc,6,Sant+Andreu,Barcelona" target="_blank" rel="noopener noreferrer" class="site-footer__link">Carrer del Llenguadoc, 6, Sant Andreu, Barcelona</a></span>
       </p>
 
       <p class="site-footer__contact-item">
         <img src={import.meta.env.BASE_URL + 'icons/llamada-telefonica.svg'} alt="" class="site-footer__icon" />
-        <span>933 46 82 70</span>
+        <span><a href="tel:933468270" class="site-footer__link">933 46 82 70</a></span>
       </p>
 
       <p class="site-footer__contact-item">
         <img src={import.meta.env.BASE_URL + 'icons/instagram.svg'} alt="" class="site-footer__icon" />
-        <span>lagar_restaurant</span>
+        <span><a href="https://www.instagram.com/restaurante_lagar" target="_blank" rel="noopener noreferrer" class="site-footer__link">restaurante_lagar</a></span>
       </p>
     </div>
   </div>
@@ -93,6 +93,18 @@
     gap: 0.75rem;
     margin-bottom: 0.6rem;
     font-size: var(--fs-small);
+  }
+
+  .site-footer__link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+
+  .site-footer__link:hover {
+    opacity: 1;
   }
 
   .site-footer__icon {
